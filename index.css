@@ -1,0 +1,366 @@
+#root{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    gap:10px;
+    height:600px;
+    background-color: black;
+}
+body{
+    background-color: black;
+}
+:root{
+    ---bccom:#09203f;
+    ---bcincom:#171819;
+}
+*{
+    padding: 0px;
+    margin: 0;
+}
+.card{
+    width: 95%;
+    height: 150px;
+    background-color:var(---bcincom);
+    border-radius:0.8em;
+    color: rgba(255, 255, 255, 0.792);
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns:repeat(4,25%);
+    grid-template-rows: repeat(6,25px);
+    padding:5px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.595);
+    box-sizing: border-box;
+}
+#date{
+    grid-column:1/3;
+    font-size:1.1em;
+    font-weight: bolder;
+    color:white;
+    letter-spacing: 1px;
+}
+#del{
+    grid-column:4/5 ;
+    border: 1px solid red;
+    border-radius: 5px;
+    justify-self: end;
+    align-self:start;
+    text-align: center;
+}
+#name{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    justify-self: center;
+    font-size:1.4em;
+    letter-spacing:1px;
+    font-weight: bolder;
+}
+#nom{
+    grid-column: 1/5;
+    grid-row: 3/5;
+    justify-self: center;
+    align-self:center;
+    font-size: 1.1em;
+    letter-spacing:1px;
+    font-weight: bolder;
+}
+#b1{
+    grid-column: 1/3;
+    grid-row: 5/7;
+    align-self: center;
+    justify-self:center;
+    text-transform: capitalize;
+    color:white;
+    text-align: center;
+    border-radius: 1em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding:10px;
+    border: 1px solid rgba(255, 0, 0, 0.56);
+}
+#b2{
+    grid-column: 3/5;
+    grid-row: 5/7;
+    align-self: center;
+    justify-self:center;
+    text-transform: capitalize;
+    border: 1px solid rgba(255, 0, 0, 0.56);
+    color:white;
+    text-align: center;
+    border-radius: 1em;
+    font-size: 1em;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding:10px;
+}
+.detail{
+    width: 95%;
+    height: 600px;
+    /* border-radius: 1em; */
+    padding:2px;
+    color:white;
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    background-color: #18191ad5;
+    box-sizing: border-box;
+    letter-spacing:2px;
+    margin-top: 50px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.595);
+}
+.detail > span{
+    font-size: 1.2em;
+    font-weight:500;
+    justify-self: center;
+}
+#back{
+    grid-column: 2/3;
+    justify-self: end;
+    border: 1px solid white;
+    align-self:start;
+    padding: 2px;
+    border-radius:5px;
+}
+#n{
+    grid-column: 1/2;
+    grid-row:1/2;
+    font-size: 1.2em;
+    font-weight:500;
+    color:rgba(225, 10, 211, 0.774);
+}
+#m{
+    grid-column: 1/3;
+    justify-self: center;
+    font-size: 1.3em;
+}
+header {
+    align-self:start;
+    color: white;
+    background-color: #171819;
+    width:100%;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 5px;
+    text-transform: capitalize;
+    align-items: center;
+    letter-spacing: 1px;
+    font-weight:500;
+    font-size: 0.8em;
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.284);
+    position: sticky;
+    top: 0;
+}
+header>span{
+   border: 1px solid white;
+   padding:5px;
+   border-radius: 0.9em;
+}
+header > span:hover{
+    color: red;
+    border-color: orange;
+}
+.form{
+    background-color:#171819;
+    height: 500px;
+    width: 95%;
+    border-radius: 1em;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns:20% 80%;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 1em;
+}
+.form > input:nth-child(1){
+    grid-column: 1/3;
+    height: 80%;
+    width: 98%;
+    text-indent:10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    align-self: center;
+    justify-self:center ;
+    border-radius: 1em;
+    background-color: transparent;
+    border: 1px solid orange;
+    color: white;
+    font-size: 1em;
+}
+.form > input:nth-child(2){
+    grid-column: 1/3;
+    height: 80%;
+    width: 98%;
+    text-indent:10px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    align-self: center;
+    justify-self:center ;
+    border-radius: 1em;
+    background-color: transparent;
+    border: 1px solid orange;
+    color: white;
+    font-size: 1em;
+}
+.form > input::placeholder{
+    color: rgba(255, 255, 255, 0.705);
+}
+.form >span:nth-child(3){
+    grid-column: 1/3;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.805);
+    justify-self:center;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    
+}
+.form>input[type="radio"]{
+    align-self: center;
+    justify-self: center;
+    width:30%;
+    height:30%;
+}
+.form >span{
+    justify-self:start;
+    align-self: center;
+    color: rgba(255, 255, 255, 0.774);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+}
+.form > #button{
+   grid-column: 2/3;
+   justify-self: center;
+   text-transform: capitalize;
+   border: 1px solid orange;
+   padding:15px;
+   border-radius: 1em;
+   color: rgba(255, 166, 0, 0.732);
+}
+.form > span:last-child{
+    grid-column: 1/2;
+    grid-row: 8/9;
+    justify-self: center;
+    font-size: 2em;
+    align-self: center;
+   border-radius: 0.5em;
+   border: 1px solid orange;
+   width:40%;
+   height:60%;
+  text-align: center;
+}
+.shirt-form,.pant-form{
+    width:95%;
+    height:500px;
+    background-color: #171819;
+    border-radius: 1em;
+    box-sizing: border-box;
+    padding:10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap:10px;
+}
+.shirt-form>input,.pant-form>input{
+    grid-column: 1/3;
+    background-color:transparent;
+    color: white;
+    width:60%;
+    text-align: center;
+    border: 1px solid yellow;
+    border-radius: 1em;
+    justify-self: center;
+    align-self: center;
+    height:100%;
+    font-size: 1.3em;
+    
+}
+.shirt-form>input::placeholder,.pant-form>input::placeholder{
+    color: rgba(255, 255, 0, 0.487);
+    font-size: 1.1em;
+}
+.shirt-form>span,.pant-form>span{
+    justify-self:center ;
+    color: white;
+    border: 1px solid yellow;
+    display: flex;
+    align-items: center;
+    border-radius:0.6em;
+    height: 100%;
+    width: 70%;
+    justify-content: center;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    color: rgba(229, 255, 0, 0.742);
+}
+.shirt-form > select,.pant-form > select{
+    background-color:#171819;
+    color: rgba(255, 255, 0, 0.612);
+    font-size: 1.3em;
+    width: 80%;
+    border-radius: 1em;
+    border: 1px solid yellow;
+    text-transform: capitalize;
+}
+.shirt-form >span:first-child,.pant-form >span:first-child{
+    justify-self: end;
+    margin-right: 5px;
+}
+.shirt-form > h2 ,.pant-form>h2{
+    color:rgba(255, 255, 0, 0.624);
+    grid-column: 1/3;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    justify-self: center;
+    align-self: end;
+    text-transform: capitalize;
+}
+#root > h1{
+    color:rgba(255, 255, 255, 0.717);
+    text-transform: capitalize;
+    font-size: 1.3em;
+    align-self: start;
+}
+#card{
+    background-color:var(---bccom);
+}
+#s{
+    display: flex;
+    flex-direction: column;
+    width:95%;
+    gap: 10px;
+    margin: 0;
+    align-self:center;
+}
+#s > input{
+    border: 1px solid rgb(217, 255, 0);
+    background-color:transparent;
+    height:50px;
+    text-indent:10px;
+    font-size: 1.3em;
+    color: white;
+    border-radius: 1em;
+}
+#s > input::placeholder{
+    color: rgb(217, 255, 0);
+    text-transform: capitalize;
+}
+#s > button {
+    width: 50%;
+    align-self: center;
+    height:40px;
+    background-color: transparent;
+    color: rgb(217, 255, 0);
+    font-size: 1.2em;
+    border: 1px solid rgb(217, 255, 0);
+    border-radius: 1em;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+#s > h1{
+    color: white;
+    justify-content: center;
+    align-self: center;
+    text-transform: capitalize;
+}
