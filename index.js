@@ -298,8 +298,8 @@ const head = (root)=>{
         op4.value = "bell-bottom"
         
         const op5 = crt("option")
-        op5.textContent = "kurta"
-        op5.value = "kurta"
+        op5.textContent = "pejma"
+        op5.value = "pejma"
 
         sel.append(op1)
         sel.append(op2)
