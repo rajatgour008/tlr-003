@@ -725,7 +725,6 @@ const head = (root)=>{
                     case "shirt":
                          clearRoot(root)
                          shirt(root,data)
-                         console.log(data)
                         break;
                     case "pant":
                         clearRoot(root)
